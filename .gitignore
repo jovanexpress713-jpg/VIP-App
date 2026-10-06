@@ -1,0 +1,23 @@
+node_modules/
+dist/
+build/
+coverage/
+.DS_Store
+*.log
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+bun.lockb
+*.tsbuildinfo
+.vite/
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+# Keep example env
+!.env.example
+# Keep zip for download feature but ignore generated base64 if needed
+# src/data/projectZipBase64.ts is intentionally committed for client-side download
