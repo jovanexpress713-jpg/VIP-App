@@ -1,0 +1,16 @@
+node_modules
+dist
+build
+coverage
+.git
+.gitignore
+.env
+.env.local
+*.log
+.DS_Store
+.vite
+.idea
+.vscode
+bun.lockb
+*.md
+!README.md

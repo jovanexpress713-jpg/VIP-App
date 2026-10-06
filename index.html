@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ar" dir="rtl" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta name="theme-color" content="#020617" />
+    <meta name="color-scheme" content="dark" />
+    
+    <title>VYRO VPN — اتصال أسرع، خصوصية أقوى</title>
+    <meta name="description" content="تطبيق VPN حديث ومتقدم لتوفير اتصال فائق السرعة، تشفير قوي، حماية الخصوصية وشبكات Wi-Fi مع خوادم عالمية وأدوات فحص متطورة. مبني بـ React + Vite + Tailwind + TypeScript." />
+    <meta name="keywords" content="VPN, VYRO VPN, خصوصية, أمان, تشفير, خوادم عالمية, WireGuard, OpenVPN, حماية واي فاي" />
+    <meta name="author" content="VYRO Team" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="VYRO VPN — اتصال أسرع، خصوصية أقوى" />
+    <meta property="og:description" content="تطبيق VPN حديث مصمم لتوفير اتصال آمن ومستقر بالإنترنت، مع واجهة بسيطة وسهلة الاستخدام تمنحك تحكمًا أكبر في اتصالك وخصوصيتك." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ar_SA" />
+    <meta property="og:locale:alternate" content="en_US" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="VYRO VPN — اتصال أسرع، خصوصية أقوى" />
+    <meta name="twitter:description" content="تطبيق VPN حديث مصمم لتوفير اتصال آمن ومستقر بالإنترنت" />
+    
+    <!-- Favicon & Icons -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23020617'/><text y='.9em' x='50%' dominant-baseline='middle' text-anchor='middle' font-size='60' fill='%2310b981'>V</text></svg>" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    
+    <!-- Fonts - Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Preload critical resources -->
+    <style>
+      /* Critical CSS for initial load */
+      html { background: #020617; }
+      body { 
+        background: #020617; 
+        margin: 0;
+        font-family: 'Cairo', 'Outfit', system-ui, sans-serif;
+      }
+      #root { min-height: 100vh; }
+      /* Loading spinner */
+      .initial-loader {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #020617;
+        z-index: 9999;
+      }
+      .initial-loader .spinner {
+        width: 40px;
+        height: 40px;
+        border: 3px solid rgba(16, 185, 129, 0.2);
+        border-top-color: #10b981;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin { to { transform: rotate(360deg); } }
+    </style>
+  </head>
+  <body class="bg-slate-950 text-slate-100 antialiased selection:bg-emerald-500 selection:text-slate-950 min-h-screen overflow-x-hidden">
+    <div id="root">
+      <div class="initial-loader">
+        <div class="spinner"></div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- NoScript fallback -->
+    <noscript>
+      <div style="position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#020617;color:#e2e8f0;padding:20px;text-align:center;z-index:10000">
+        <div>
+          <h1 style="color:#10b981;margin-bottom:10px">VYRO VPN</h1>
+          <p>يرجى تفعيل JavaScript لتشغيل التطبيق</p>
+          <p style="font-size:14px;color:#64748b;margin-top:10px">Please enable JavaScript to run VYRO VPN</p>
+        </div>
+      </div>
+    </noscript>
+  </body>
+</html>

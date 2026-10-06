@@ -1,0 +1,6 @@
+{
+  "name": "VYRO VPN",
+  "description": "تطبيق VPN حديث ومتقدم لتوفير اتصال فائق السرعة، تشفير قوي، حماية الخصوصية وشبكات Wi-Fi مع خوادم عالمية وأدوات فحص متطورة.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

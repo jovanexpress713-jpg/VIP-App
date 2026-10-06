@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  vyro-vpn:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: vyro-vpn
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 10s
+    labels:
+      - "com.vyro.description=VYRO VPN - Faster Connection, Stronger Privacy"
+      - "com.vyro.version=2.5.4"
+
+  # Optional: Nginx reverse proxy for production
+  # nginx:
+  #   image: nginx:alpine
+  #   container_name: vyro-vpn-nginx
+  #   ports:
+  #     - "80:80"
+  #     - "443:443"
+  #   volumes:
+  #     - ./nginx.conf:/etc/nginx/nginx.conf:ro
+  #     - ./ssl:/etc/nginx/ssl:ro
+  #   depends_on:
+  #     - vyro-vpn
+  #   restart: unless-stopped
